@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprende Git Interactivamente</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Aprende Git 🚀</h1>
+      <p>Comprende Git desde la teoría hasta la práctica</p>
+    </header>
+
+    <nav class="menu">
+      <button onclick="showSection('teoria')">Teoría</button>
+      <button onclick="showSection('config')">Configuración</button>
+      <button onclick="showSection('flujo')">Flujo Git</button>
+      <button onclick="showSection('terminal')">Simulador</button>
+    </nav>
+
+    <main>
+      <section id="teoria" class="active">
+        <h2>¿Qué es Git?</h2>
+        <p>
+          Git es un sistema de control de versiones distribuido que permite
+          registrar cambios en archivos y coordinar el trabajo entre varias
+          personas en un proyecto de software.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Control de versiones</h3>
+            <p>Permite guardar cada cambio realizado en el código.</p>
+          </div>
+
+          <div class="card">
+            <h3>Historial</h3>
+            <p>Puedes volver a cualquier versión anterior.</p>
+          </div>
+
+          <div class="card">
+            <h3>Trabajo colaborativo</h3>
+            <p>Muchos desarrolladores pueden trabajar en paralelo.</p>
+          </div>
+
+          <div class="card">
+            <h3>Branches</h3>
+            <p>Permite crear ramas para desarrollar nuevas funcionalidades.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="config">
+        <h2>Configuración inicial de Git</h2>
+
+        <div class="card">
+          <h3>Configurar nombre</h3>
+          <pre>git config --global user.name "Tu Nombre"</pre>
+        </div>
+
+        <div class="card">
+          <h3>Configurar email</h3>
+          <pre>git config --global user.email "correo@email.com"</pre>
+        </div>
+
+        <div class="card">
+          <h3>Ver configuración</h3>
+          <pre>git config --list</pre>
+        </div>
+
+        <p class="confg">
+          Estos comandos permiten que Git identifique quién realiza los cambios.
+        </p>
+      </section>
+
+      <section id="flujo">
+        <h2>Flujo de trabajo en Git</h2>
+
+        <div class="timeline">
+          <div class="step">
+            <h3>1. Crear repositorio</h3>
+            <pre>git init</pre>
+          </div>
+
+          <div class="step">
+            <h3>2. Agregar archivos</h3>
+            <pre>git add .</pre>
+          </div>
+
+          <div class="step">
+            <h3>3. Crear commit</h3>
+            <pre>git commit -m "primer commit"</pre>
+          </div>
+
+          <div class="step">
+            <h3>4. Conectar repositorio remoto</h3>
+            <pre>git remote add origin URL</pre>
+          </div>
+
+          <div class="step">
+            <h3>5. Subir cambios</h3>
+            <pre>git push -u origin main</pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="terminal">
+        <h2>Simulador de comandos Git</h2>
+
+        <div class="terminal">
+          <input id="cmd" placeholder="Escribe un comando Git..." />
+          <button onclick="runCommand()">Ejecutar</button>
+
+          <div id="output"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Plataforma educativa Git | Responsive Web</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
